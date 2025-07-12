@@ -1,0 +1,10 @@
+body {
+
+    background-color: pink;
+}
+
+.petInfo {
+    background-color: lightgray;
+    margin: 5px 5px;
+    border: solid black 2px;
+}
