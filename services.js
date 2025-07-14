@@ -29,6 +29,7 @@ $(document).ready(function(){
     } else {
         alert("Services registered successfully");
     }
+
 });
     $("#clearButton").click(function (event){
     $("form").get(0).reset();
@@ -36,4 +37,18 @@ $(document).ready(function(){
     $("#serviceDescription").css('border', '');
     $("#servicePrice").css('border', '');
     });
+
+});
+
+$("#changeModeButton").click(function (){
+
+   $("body").toggleClass("dark-mode");
+
+    const isDark = $("body").hasClass("dark-mode");
+
+    if(isDark){
+    document.querySelector("h1").textContent = "Dark Mode";
+    } else {
+    document.querySelector("h1").textContent = "Light Mode";
+    }
 });

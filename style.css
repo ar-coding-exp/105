@@ -1,10 +1,30 @@
-body {
+ body {
+    background-color: var(--background);
 
-    background-color: pink;
 }
-
 .petInfo {
     background-color: lightgray;
     margin: 5px 5px;
     border: solid black 2px;
+}
+:root{
+    /* Light mode by default */
+    --background: #FBBBFb;
+    --surface: #FDFDFF;
+    --text: #1a2744;
+    --button: #008fff;
+}
+
+.dark-mode {
+    --background: #1a2744;
+    --surface: #23345a;
+    --text: #f4f4fb;
+    --button: #45adff;
+}
+
+ h1 {   
+    color: var(--text);
+ }
+label {
+    color: var(--text);
 }
