@@ -19,6 +19,14 @@ $(document).ready(function(){
     //console log the inputs to double check the information
     console.log(` Service Name: ${name}, Service Description: ${description}, Service Price; ${price}`);
 
+    $("#registerCard").html(`<p>Service: ${name}</p>
+    <p>Description: ${description}</p>
+    <p>Price: ${price}</p>`);
+
+    localStorage.setItem("serviceName", name);
+    localStorage.setItem("serviceDescription", description);
+    localStorage.setItem("servicePrice", price);
+
     // validate the inputs
     if ( !name || !description || isNaN(price) ||  price<=0 ){
     alert("All the fields are required and/or the price must be a positive number");
@@ -38,7 +46,7 @@ $(document).ready(function(){
     $("#servicePrice").css('border', '');
     });
 
-});
+
 
 $("#changeModeButton").click(function (){
 
@@ -51,4 +59,7 @@ $("#changeModeButton").click(function (){
     } else {
     document.querySelector("h1").textContent = "Light Mode";
     }
+
+});
+
 });
